@@ -6,8 +6,9 @@ from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 
 df = pd.read_parquet('beta.parquet.gzip') 
 df1 = pd.read_csv('beta.csv')
-#new_df = 
-#AgGrid(df)#, editable=True)
+
+AgGrid(df1)  
+#, editable=True)
 #new_df = grid_return["data"]
 st.write(df1)
 
