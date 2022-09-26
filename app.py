@@ -6,5 +6,23 @@ from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 
 df = pd.read_parquet('beta.parquet.gzip') 
 
-st.subheader(df.columns)
-st.dataframe(df)
+grid_options = {
+    "columnDefs": [
+        {
+            "headerName": "col1,
+            "field": "col1",
+            "editable": True,
+        },
+        {
+            "headerName": "col2",
+            "field": "col2",
+            "editable": False,
+        },
+    ],
+}
+
+grid_return = AgGrid(df, grid_options)
+new_df = grid_return["data"]
+
+st.write(new_df)
+
