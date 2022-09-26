@@ -3,5 +3,5 @@ numpy
 scipy
 pandas==1.5.0
 matplotlib
-streamlit-aggrid
 streamlit-pandas-profiling
+streamlit-aggrid=0.3.3
