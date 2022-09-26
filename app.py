@@ -6,4 +6,5 @@ from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
 
 df = pd.read_parquet('beta.parquet.gzip') 
 
+st.subheader(df.columns)
 st.write(df)
